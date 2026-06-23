@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+      }
+      nav {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 20px;
+        background:white;
+        border-bottom:1px solid #ddd;
+      }
+
+      nav ul {
+        display:flex;
+        gap:20px;
+        list-style:none;
+        margin:0;
+        padding:0;
+      }
+
+      nav input {
+        width:500px;
+        max-width:100%;
+        padding:12px 20px;
+        border:1px solid #ccc;
+        border-radius:30px;
+      }
+
+      .nav-left {
+        display:flex;
+        align-items:center;
+        gap:20px
+      }
+   
+      .nav-right {
+        display:flex;
+        align-items:center;
+        gap:10px;
+      }
+
+      .search-bar {
+        width:850px;
+        padding:12px 20px;
+        border:1px solid #999;
+        border-radius:30px;
+      }
+
+      .nav-right input {
+        flex:1;
+      }
+        
+      nav li {
+        cursor:pointer;
+        font-size:14px;
+        color:#333;
+      }
+
+      nav li:hover {
+        color:#a435f0;
+      }
+
+      .logo img {
+        height:50px;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #f048de;
+      }
+
+      .signup-card {
+        background: transparent;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        width: 350px;   
+      }
+
+      .signup-container {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:100px;
+        margin-top:50px
+      }
+
+      .illustration img {
+        width:350px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      input:focus {
+        border-color: #A83EE8;
+        outline: none;
+        box-shadow: 0 0 5px rgba(168, 62, 232, 0.3);
+      }
+
+      h1 {
+        color: #7835cc;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        color: #666;
+        font-weight: normal;
+      }
+
+      button {
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        background-color: #a435f0;
+        padding: 12px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #A83EE8;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-left">
+          <div class="logo">
+            <img src="images\udemy_logo.png" alt="udemy logo">
+          </div>
+          <ul>
+            <li>Find Courses</li>
+            <li>Get Certified</li>
+            <li>Subscribe</li>
+          </ul>
+      </div>
+ 
+      <div class="nav-right">
+         <input class="search-bar"
+                type="text" 
+                placeholder="Search for anything">
+         <a href="log_in.html" class="btn-login">
+            Log In
+         </a>
+         <a href="sign_up.html" class="btn-signup">
+           Sign Up
+         </a>
+      </div>
+    </nav>
+
+    <section class="signup-container">
+      <div class="illustration">
+        <img src="images\login_pic.png" alt="illustration pic">
+      </div>
+
+      <div class="signup-card">
+        <header>
+          <h1>Create an Account</h1>
+        </header>
+        <main>
+          <form action="/submit-signup" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+        
+            <br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+        
+            <br><br>
+
+            <label for="first_name">First Name:</label><br>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter first name" required>
+
+            <br><br>
+
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter last name" required>
+        
+            <br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+        
+            <br><br>
+
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
+
+            <br><br>
+
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="log_in.html">Log in here</a>.</p>
+          </form>
+        </main>
+      </div>
+    </section>
+ </body>
+</html>

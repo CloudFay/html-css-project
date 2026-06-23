@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            * {
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
+
+            body {
+                font-family:Arial, sans-serif;
+                background:#f3f3f3;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                min-height:100vh;
+            }
+
+            p {
+                text-align: center;
+                color:black;
+            }
+
+            .profile-card{
+                position:relative;
+                width:320px;
+                background:white;
+                border-radius:30px;
+                padding:15px;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            }
+
+            .profile-image{
+                width:100%;
+                height:320px;
+                object-fit:cover;
+                border-radius:25px;
+            }
+
+            .image-container {
+                position:relative;
+            }
+
+            .online {
+                position:absolute;
+                bottom:10px;
+                right:-5px;
+                width:17px;
+                height:17px;
+                background:green;
+                border-radius:50%; 
+            }
+            
+            .profile-content{
+                padding:25px 15px;
+            }
+            
+            .name-row{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:7px;
+                margin-bottom: 7px;
+            }
+            
+            .name-row h3 {
+                font-size:30px;
+                text-align: center;
+            }
+            
+            .verified{
+                width:15px;
+                height:15px;
+                background:green;
+                color:white;
+                border-radius:50%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                font-size:12px;
+            }
+            
+            .bio{
+                color:#555;
+                line-height:1.6;
+                margin-bottom:25px;
+            }
+            
+            .card-footer{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+            }
+
+            button{
+                border:none;
+                background:#f048de;
+                color:white;
+                padding:12px 24px;
+                border:none;
+                border-radius:25px;
+                font-weight:bold;
+                cursor:pointer;
+            }
+
+            button:hover{
+                background:#b121b6;
+            }
+
+            .social-icons {
+                display:flex;
+                justify-content:center;
+                gap:20px;
+                margin-top:20px;
+            }
+
+            .social-icons a {
+                text-decoration:none;
+                color: #555;
+                font-size: 24px;
+                transition: 0.3s;
+            }
+
+            .social-icons a:hover {
+                transform:translateY(-3px);
+                color:#000
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+      <div class="profile-card">
+          <div class="image-container">
+              <img src="images\Fay.png" alt="Profile Image" class="profile-image">
+              <span class="online"></span>
+          </div>
+          
+    
+          <div class="profile-content">
+              <div class="name-row">
+                <h2>Faith Omobude</h2>
+                <span class="verified">✓</span>
+          </div>
+
+          <p class="bio">
+            Trying to reach the peak of my existence
+            <br>
+            (Cloud Engineer in-view)
+          </p>
+
+          <div class="card-footer">
+              <div class="stats">
+                <span>👤 312</span>
+                <span>📷 48</span>
+              </div>
+            
+              <button>
+                Follow +
+              </button>
+          </div>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:faith@example.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+      </div>
+    </body>
+</html>
